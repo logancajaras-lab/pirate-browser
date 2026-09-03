@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pirate Browser 🏴‍☠️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Importing handwritten fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Patrick+Hand&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --text-main: #c9d1d9;
+            --bg-color: #1a1a1a;
+            --card-bg: #222222;
+            --text-main: #e0e0e0;
             --text-heading: #ffffff;
-            --accent: #58a6ff;
-            --accent-hover: #1f6feb;
+            --accent: #d9480f;
+            --accent-hover: #f76707;
         }
         body {
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
+            /* A subtle paper/grunge texture using a linear gradient */
+            background-image: repeating-linear-gradient(0deg, transparent, transparent 29px, #2a2a2a 30px);
             color: var(--text-main);
-            font-family: 'Inter', sans-serif;
+            /* Body font is highly legible handwriting */
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.25rem;
             line-height: 1.6;
             display: flex;
             flex-direction: column;
@@ -27,38 +32,46 @@
         }
         header {
             width: 100%;
-            padding: 100px 20px;
+            padding: 80px 20px;
             text-align: center;
-            background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
-            border-bottom: 1px solid #30363d;
+            /* Uneven border for a sketched look */
+            border-bottom: 3px dashed #444;
         }
         h1 {
-            font-size: 4rem;
+            /* Heading font is more dramatic handwriting */
+            font-family: 'Caveat', cursive;
+            font-size: 5rem;
             color: var(--text-heading);
-            margin: 0 0 20px 0;
-            font-weight: 900;
-            letter-spacing: -2px;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0px #000;
+            transform: rotate(-2deg);
         }
         .subtitle {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             max-width: 600px;
             margin: 0 auto 40px auto;
-            color: #8b949e;
+            color: #b3b3b3;
+            transform: rotate(1deg);
         }
         .btn {
             display: inline-block;
-            background-color: var(--accent);
-            color: #ffffff;
+            background-color: transparent;
+            color: var(--accent);
             text-decoration: none;
-            padding: 15px 40px;
-            border-radius: 8px;
+            padding: 10px 30px;
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
             font-weight: bold;
-            font-size: 1.2rem;
-            transition: background-color 0.2s ease, transform 0.2s ease;
+            border: 3px solid var(--accent);
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; /* Sketched box effect */
+            transition: all 0.2s ease;
+            transform: rotate(-1deg);
         }
         .btn:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-2px);
+            background-color: var(--accent);
+            color: #1a1a1a;
+            transform: rotate(1deg) scale(1.05);
         }
         .container {
             max-width: 900px;
@@ -66,35 +79,45 @@
             padding: 60px 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 40px;
         }
         .feature-card {
             background-color: var(--card-bg);
             padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #30363d;
-            transition: border-color 0.3s ease;
+            /* Hand-drawn box border */
+            border: 2px solid #555;
+            border-radius: 2px 255px 3px 255px / 255px 5px 225px 3px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
         }
         .feature-card:hover {
             border-color: var(--accent);
+            transform: translateY(-5px) rotate(2deg);
         }
         .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            display: inline-block;
         }
         .feature-card h3 {
+            font-family: 'Caveat', cursive;
             color: var(--text-heading);
             margin-top: 0;
-            font-size: 1.3rem;
+            font-size: 2.2rem;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: var(--accent);
         }
         footer {
             margin-top: 50px;
             padding: 30px;
             text-align: center;
-            color: #8b949e;
-            font-size: 0.9rem;
-            border-top: 1px solid #30363d;
+            color: #777;
+            font-size: 1.2rem;
+            border-top: 2px dashed #444;
             width: 100%;
+            font-family: 'Caveat', cursive;
+            font-size: 1.8rem;
         }
     </style>
 </head>
@@ -107,25 +130,25 @@
     </header>
 
     <div class="container">
-        <div class="feature-card">
+        <div class="feature-card" style="transform: rotate(1deg);">
             <div class="feature-icon">🥷</div>
             <h3>Stealth Mode</h3>
             <p>Built-in adblocking, user-agent spoofing, and tracker prevention to keep your footprint invisible across the web.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" style="transform: rotate(-1deg);">
             <div class="feature-icon">📥</div>
             <h3>Universal Downloader</h3>
             <p>Automatically detect and download embedded videos, HLS streams, and DASH streams from almost any website natively.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" style="transform: rotate(1deg);">
             <div class="feature-icon">⚡</div>
             <h3>Multi-Threaded</h3>
             <p>Powered by native integrations with yt-dlp and ffmpeg, maximizing your bandwidth for lightning-fast downloads.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" style="transform: rotate(-2deg);">
             <div class="feature-icon">🛡️</div>
             <h3>100% Open Source</h3>
             <p>Fully transparent codebase. No hidden telemetry, no tracking, built securely on the Electron framework.</p>
