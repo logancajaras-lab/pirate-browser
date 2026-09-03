@@ -1,0 +1,695 @@
+
+D:\project\pirate browser>npm start
+
+> pirate-browser@1.0.0 start
+> electron .
+
+
+[15868:0524/173449.778:ERROR:gpu_process_host.cc(997)] GPU process exited unexpectedly: exit_code=-1073741819
+Adblocker enabled: strict
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://www.gstatic.com/responsive-srp/images/card1.mp4
+Cleaned URL: https://www.gstatic.com/responsive-srp/images/card1.mp4
+Response Headers: {
+  'Content-Length': [ '54436' ],
+  'Content-Range': [ 'bytes 0-54435/54436' ],
+  'accept-ranges': [ 'bytes' ],
+  age: [ '53' ],
+  'alt-svc': [ 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000' ],
+  'cache-control': [ 'public, max-age=3000' ],
+  'content-security-policy': [
+    "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/responsive-srp"
+  ],
+  'content-type': [ 'video/mp4' ],
+  'cross-origin-opener-policy': [ 'same-origin; report-to="responsive-srp"' ],
+  'cross-origin-resource-policy': [ 'cross-origin' ],
+  date: [ 'Sun, 24 May 2026 11:22:36 GMT' ],
+  expires: [ 'Sun, 24 May 2026 12:12:36 GMT' ],
+  'last-modified': [ 'Mon, 18 May 2026 17:48:00 GMT' ],
+  'report-to': [
+    '{"group":"responsive-srp","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/responsive-srp"}]}'
+  ],
+  server: [ 'sffe' ],
+  'x-content-type-options': [ 'nosniff' ],
+  'x-xss-protection': [ '0' ]
+}
+Computed Size: 54436 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://www.gstatic.com/responsive-srp/images/card2.mp4
+Cleaned URL: https://www.gstatic.com/responsive-srp/images/card2.mp4
+Response Headers: {
+  'Content-Length': [ '277581' ],
+  'Content-Range': [ 'bytes 0-277580/277581' ],
+  'accept-ranges': [ 'bytes' ],
+  age: [ '100' ],
+  'alt-svc': [ 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000' ],
+  'cache-control': [ 'public, max-age=3000' ],
+  'content-security-policy': [
+    "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/responsive-srp"
+  ],
+  'content-type': [ 'video/mp4' ],
+  'cross-origin-opener-policy': [ 'same-origin; report-to="responsive-srp"' ],
+  'cross-origin-resource-policy': [ 'cross-origin' ],
+  date: [ 'Sun, 24 May 2026 11:31:36 GMT' ],
+  expires: [ 'Sun, 24 May 2026 12:21:36 GMT' ],
+  'last-modified': [ 'Mon, 18 May 2026 17:48:00 GMT' ],
+  'report-to': [
+    '{"group":"responsive-srp","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/responsive-srp"}]}'
+  ],
+  server: [ 'sffe' ],
+  'x-content-type-options': [ 'nosniff' ],
+  'x-xss-protection': [ '0' ]
+}
+Computed Size: 277581 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4.m3u8
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4.m3u8
+Response Headers: {
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '3220371' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c27509c61fede-SIN' ],
+  'content-encoding': [ 'gzip' ],
+  'content-type': [ 'application/vnd.apple.mpegurl' ],
+  date: [ 'Sun, 24 May 2026 12:02:49 GMT' ],
+  expires: [ 'Wed, 21 May 2036 12:02:49 GMT' ],
+  'last-modified': [ 'Thu, 21 May 2026 01:27:07 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ],
+  'x-message': [
+    'http://ip266712749.ahcdn.com/key=WyaoFAXR-7AOJhw320bGNA,,end=1786403797/state=aeHFJYNr/reftag=0337199922/media=hls4/ssd1/21/8/477613128.mp4/index.m3u8'
+  ]
+}
+Computed Size: 0 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/init-v1-a1.mp4
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/init-v1-a1.mp4
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '3356698' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c28626dccfede-SIN' ],
+  'content-length': [ '1157' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:03:32 GMT' ],
+  etag: [ '"-1-485"' ],
+  expires: [ 'Wed, 21 May 2036 12:03:32 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 1157 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-1-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-1-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6850978' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2862ff37fede-SIN' ],
+  'content-length': [ '142411' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:03:32 GMT' ],
+  etag: [ '"-1-22c4b"' ],
+  expires: [ 'Wed, 21 May 2036 12:03:32 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 142411 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-2-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-2-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6853951' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c28643a55fede-SIN' ],
+  'content-length': [ '235821' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:03:33 GMT' ],
+  etag: [ '"-1-3992d"' ],
+  expires: [ 'Wed, 21 May 2036 12:03:33 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 235821 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-3-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-3-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6853951' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c28655d50fede-SIN' ],
+  'content-length': [ '329648' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:03:33 GMT' ],
+  etag: [ '"-1-507b0"' ],
+  expires: [ 'Wed, 21 May 2036 12:03:33 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 329648 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-4-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-4-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6854425' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c28666fe1fede-SIN' ],
+  'content-length': [ '333046' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:03:33 GMT' ],
+  etag: [ '"-1-514f6"' ],
+  expires: [ 'Wed, 21 May 2036 12:03:33 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 333046 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-5-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-5-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6854423' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c286729bdfede-SIN' ],
+  'content-length': [ '274838' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:03:33 GMT' ],
+  etag: [ '"-1-43196"' ],
+  expires: [ 'Wed, 21 May 2036 12:03:33 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 274838 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-6-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-6-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '5895067' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2867eba1fede-SIN' ],
+  'content-length': [ '279735' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:03:33 GMT' ],
+  etag: [ '"-1-444b7"' ],
+  expires: [ 'Wed, 21 May 2036 12:03:33 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 279735 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-7-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-7-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6854421' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2868ee92fede-SIN' ],
+  'content-length': [ '270594' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:03:33 GMT' ],
+  etag: [ '"-1-42102"' ],
+  expires: [ 'Wed, 21 May 2036 12:03:33 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 270594 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-8-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-8-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '5638363' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2869e936fede-SIN' ],
+  'content-length': [ '238756' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:03:34 GMT' ],
+  etag: [ '"-1-3a4a4"' ],
+  expires: [ 'Wed, 21 May 2036 12:03:34 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 238756 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-9-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/720p.av1.mp4/seg-9-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '2965107' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2c93bf3622a1-SIN' ],
+  'content-length': [ '327014' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:24 GMT' ],
+  etag: [ '"-1-4fd66"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:24 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 327014 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4.m3u8
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4.m3u8
+Response Headers: {
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6854568' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2c960cca22a1-SIN' ],
+  'content-encoding': [ 'gzip' ],
+  'content-type': [ 'application/vnd.apple.mpegurl' ],
+  date: [ 'Sun, 24 May 2026 12:06:24 GMT' ],
+  expires: [ 'Wed, 21 May 2036 12:06:24 GMT' ],
+  'last-modified': [ 'Fri, 15 May 2026 23:06:44 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 0 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/init-v1-a1.mp4
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/init-v1-a1.mp4
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '1063286' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2c969e1d22a1-SIN' ],
+  'content-length': [ '1157' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:25 GMT' ],
+  etag: [ '"-1-485"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:25 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 1157 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-1-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-1-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6825429' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2c971f8d22a1-SIN' ],
+  'content-length': [ '266812' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:25 GMT' ],
+  etag: [ '"-1-4123c"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:25 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 266812 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-2-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-2-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6825429' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2c97d9b622a1-SIN' ],
+  'content-length': [ '495922' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:25 GMT' ],
+  etag: [ '"-1-79132"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:25 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 495922 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-3-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-3-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6841000' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2c98fcdc22a1-SIN' ],
+  'content-length': [ '702244' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:25 GMT' ],
+  etag: [ '"-1-ab724"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:25 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 702244 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-4-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-4-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '5737955' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2c99ef7c22a1-SIN' ],
+  'content-length': [ '696198' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:25 GMT' ],
+  etag: [ '"-1-a9f86"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:25 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 696198 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-5-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-5-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '5806995' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2c9ad9e322a1-SIN' ],
+  'content-length': [ '632847' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:25 GMT' ],
+  etag: [ '"-1-9a80f"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:25 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 632847 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-6-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-6-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6854123' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2c9b8b8522a1-SIN' ],
+  'content-length': [ '571120' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:25 GMT' ],
+  etag: [ '"-1-8b6f0"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:25 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 571120 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-7-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-7-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6854123' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2c9c2cf422a1-SIN' ],
+  'content-length': [ '563846' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:25 GMT' ],
+  etag: [ '"-1-89a86"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:25 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 563846 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-8-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-8-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6854122' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2c9d0fb222a1-SIN' ],
+  'content-length': [ '579249' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:26 GMT' ],
+  etag: [ '"-1-8d6b1"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:26 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 579249 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-9-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-9-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6854119' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2c9db9a522a1-SIN' ],
+  'content-length': [ '713056' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:26 GMT' ],
+  etag: [ '"-1-ae160"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:26 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 713056 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-10-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-10-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '1067843' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2cac6d8422a1-SIN' ],
+  'content-length': [ '776315' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:28 GMT' ],
+  etag: [ '"-1-bd87b"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:28 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 776315 bytes
+--------------------------------------\n\n
+\n\n--- [SNIFFER DEBUG] VIDEO DETECTED ---
+Original URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-11-v1-a1.m4s
+Cleaned URL: https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-11-v1-a1.m4s
+Response Headers: {
+  'accept-ranges': [ 'bytes' ],
+  'access-control-allow-credentials': [ 'true' ],
+  'access-control-allow-headers': [ 'Content-Type, Origin, Accept, Range, Cache-Control' ],
+  'access-control-allow-methods': [ 'HEAD, GET, OPTIONS' ],
+  'access-control-allow-origin': [ '*' ],
+  'access-control-expose-headers': [ 'Content-Range, Date, Etag, Timing-Allow-Origin' ],
+  'access-control-max-age': [ '31536000' ],
+  age: [ '6854117' ],
+  'cache-control': [ 'public, max-age=315360000' ],
+  'cf-cache-status': [ 'HIT' ],
+  'cf-ray': [ 'a00c2cc56fec22a1-SIN' ],
+  'content-length': [ '747635' ],
+  'content-type': [ 'video/mp4' ],
+  date: [ 'Sun, 24 May 2026 12:06:32 GMT' ],
+  etag: [ '"-1-b6873"' ],
+  expires: [ 'Wed, 21 May 2036 12:06:32 GMT' ],
+  server: [ 'cloudflare' ],
+  'timing-allow-origin': [ '*' ],
+  vary: [ 'Accept-Encoding' ]
+}
+Computed Size: 747635 bytes
+--------------------------------------\n\n
+Starting download for https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-10-v1-a1.m4s at best quality
+Spawned Ffmpeg with command: ffmpeg -headers User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+ -i https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-10-v1-a1.m4s -y -c copy C:\Users\User\Downloads\pirate_video_1779624313399.mp4
+An error occurred: ffmpeg exited with code 3199971767: Error opening input file https://video-cf.xhpingcdn.com/hTIGs%2B%2F8idMC8%2FqI3fNHHur%2Fi4wN4CfX3PICSdZR46I%3D/121/1779638400/media=hls4/multi=256x144:144p:,426x240:240p:,854x480:480p:,1280x720:720p:,1920x1080:1080p:,3840x2160:2160p:/029/004/863/1080p.av1.mp4/seg-10-v1-a1.m4s.
+Error opening input files: Invalid data found when processing input

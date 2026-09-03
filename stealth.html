@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stealth Settings</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f8f9fa; color: #202124; margin: 0; }
+    h1 { font-weight: 500; font-size: 24px; margin-bottom: 24px; margin-top: 0; }
+    .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.12); margin-bottom: 16px; max-width: 600px;}
+    .setting-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .setting-info h3 { margin: 0 0 4px 0; font-size: 16px; font-weight: 500; }
+    .setting-info p { margin: 0; font-size: 13px; color: #5f6368; }
+    
+    /* Toggle switch */
+    .switch { position: relative; display: inline-block; width: 40px; height: 20px; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 20px; }
+    .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 2px; bottom: 2px; background-color: white; transition: .4s; border-radius: 50%; }
+    input:checked + .slider { background-color: #1a73e8; }
+    input:checked + .slider:before { transform: translateX(20px); }
+  </style>
+</head>
+<body>
+  <h1>Stealth Mode</h1>
+
+  <div class="card">
+    <div class="setting-row" style="margin-bottom: 8px;">
+      <div class="setting-info">
+        <h3 style="display: flex; align-items: center;">Enable Stealth Mode <span id="stealth-info-icon" style="cursor: pointer; color: #1a73e8; font-size: 16px; margin-left: 8px;" title="Show allowed configuration options">ⓘ</span></h3>
+        <p>Override browser fingerprint parameters globally. Provide valid JSON.</p>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="stealth-mode-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div id="stealth-config-container" style="display: flex; flex-direction: column; gap: 8px; margin-top: 12px;">
+      <textarea id="stealth-json" rows="12" style="width: 100%; font-family: monospace; font-size: 13px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" placeholder='{
+  "hardwareConcurrency": 12,
+  "deviceMemory": 8,
+  "ipAddress": "1.2.3.4",
+  "httpHost": "example.com"
+}'></textarea>
+      <span id="stealth-json-error" style="color: #dc2626; font-size: 12px; display: none;">Invalid JSON structure</span>
+    </div>
+    
+    <div id="stealth-info-container" style="display: none; margin-top: 12px; background: #e8f0fe; padding: 12px; border-radius: 4px; border: 1px solid #c2d7fa;">
+      <p style="margin: 0 0 8px 0; font-size: 13px; font-weight: bold; color: #1a73e8;">Allowed Configuration Reference:</p>
+      <textarea readonly rows="28" style="width: 100%; font-family: monospace; font-size: 12px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: #f8f9fa;">{
+  "hardwareConcurrency": 12,
+  "deviceMemory": 8,
+  "maxTouchPoints": 0,
+  "language": "en-IN",
+  "languages": ["en-IN", "en-GB", "en-US"],
+  "timezone": "Asia/Calcutta",
+  "timezoneOffset": -330,
+  "ipAddress": "123.45.67.89",
+  "httpHost": "example.com",
+  "screen": {
+    "width": 1920,
+    "height": 1080,
+    "availWidth": 1920,
+    "availHeight": 1032,
+    "colorDepth": 24,
+    "pixelDepth": 24
+  },
+  "window": {
+    "innerWidth": 1920,
+    "innerHeight": 943,
+    "outerWidth": 1920,
+    "outerHeight": 1032,
+    "devicePixelRatio": 1
+  },
+  "connection": {
+    "effectiveType": "4g",
+    "downlink": 10,
+    "rtt": 50,
+    "saveData": false,
+    "type": null
+  }
+}</textarea>
+    </div>
+  </div>
+
+  <script src="stealth.js"></script>
+</body>
+</html>

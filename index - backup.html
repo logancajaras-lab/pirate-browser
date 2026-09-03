@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pirate Browser</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #dee1e6;
+    }
+    #toolbar {
+      display: flex;
+      padding: 8px;
+      background-color: white;
+      border-bottom: 1px solid #ccc;
+      align-items: center;
+      -webkit-app-region: no-drag;
+    }
+    #nav-buttons {
+      display: flex;
+      gap: 5px;
+      margin-right: 10px;
+    }
+    button {
+      background: none;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #f1f3f4;
+    }
+    #url-bar {
+      flex-grow: 1;
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid transparent;
+      background-color: #f1f3f4;
+      font-size: 14px;
+      outline: none;
+    }
+    #url-bar:focus {
+      background-color: #ffffff;
+      border: 1px solid #1a73e8;
+      box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3);
+    }
+    #tabs {
+      display: flex;
+      background-color: #dee1e6;
+      padding: 8px 140px 0 8px; /* Leave space on the right for window controls */
+      align-items: center;
+      -webkit-app-region: drag; /* Allow window dragging */
+      height: 30px;
+    }
+    #overflow-btn {
+      display: none;
+      padding: 4px 8px;
+      margin-right: 8px;
+      cursor: pointer;
+      background: #f1f3f4;
+      border-radius: 4px;
+      font-weight: bold;
+      -webkit-app-region: no-drag;
+    }
+    #overflow-btn:hover {
+      background: #dadce0;
+    }
+    .tab {
+      padding: 8px 12px;
+      background-color: #f1f3f4;
+      border-radius: 8px 8px 0 0;
+      margin-right: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      flex: 1 1 0; /* Allow shrinking and growing evenly */
+      min-width: 50px;
+      max-width: 200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid transparent;
+      -webkit-app-region: no-drag;
+    }
+    #new-tab {
+      padding: 4px 8px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 50%;
+      background: #f1f3f4;
+      margin-left: 4px;
+      -webkit-app-region: no-drag;
+    }
+    #new-tab:hover {
+      background: #dadce0;
+    }
+    .tab.active {
+      background-color: #ffffff;
+    }
+    .tab .title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex-grow: 1;
+    }
+    .close-tab {
+      font-size: 10px;
+      margin-left: 4px;
+      padding: 2px 4px;
+      border-radius: 50%;
+      min-width: 14px;
+      text-align: center;
+    }
+    .close-tab:hover {
+      background-color: #dadce0;
+    }
+    #new-tab {
+      padding: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    #content-area {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    webview {
+      width: 100%;
+      flex-grow: 1;
+      border: none;
+      display: none;
+    }
+    webview.active {
+      display: flex;
+    }
+    #stream-btn-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      display: none;
+    }
+    #stream-btn {
+      color: #ea4335;
+      font-size: 20px;
+    }
+    #stream-badge {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      background: red;
+      color: white;
+      font-size: 10px;
+      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      pointer-events: none;
+    }
+    #video-list-dropdown {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 40px;
+      background: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      z-index: 2000;
+      max-height: 500px;
+      width: 700px;
+      max-width: 90vw;
+      overflow-y: auto;
+      overflow-x: hidden;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    .video-row {
+      display: flex;
+      padding: 10px 25px 10px 10px;
+      border-bottom: 1px solid #f1f3f4;
+      align-items: center;
+      flex-wrap: nowrap;
+      box-sizing: border-box;
+    }
+    .video-row:last-child {
+      border-bottom: none;
+    }
+    .video-thumb {
+      width: 120px;
+      height: 80px;
+      background: #000;
+      margin-right: 15px;
+      border-radius: 4px;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+    }
+    .video-info {
+      flex: 1;
+      min-width: 0;
+      max-width: 380px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      margin-right: 15px;
+    }
+    .video-title {
+      font-size: 15px;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 6px;
+    }
+    .video-meta {
+      font-size: 13px;
+      color: #5f6368;
+    }
+    .video-dl-btn {
+      background: #34a853;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+    }
+    .video-dl-btn:hover { background: #2b8c46; }
+    .quality-selector {
+      display: none;
+      margin-top: 8px;
+      width: 100%;
+    }
+    .quality-selector select { width: 100%; margin-bottom: 6px; padding: 4px; border-radius: 4px; border: 1px solid #ccc; }
+    .quality-selector button.confirm-dl { width: 100%; background: #1a73e8; color: white; border-radius: 4px; border: none; padding: 6px; cursor: pointer; border-radius: 16px; font-weight: bold; }
+    .quality-selector button.confirm-dl:hover { background: #1557b0; }
+    #tab-dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 8px;
+      background: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      z-index: 2000;
+      max-height: 400px;
+      overflow-y: auto;
+      min-width: 150px;
+    }
+    .dropdown-item {
+      padding: 8px 12px;
+      font-size: 12px;
+      cursor: pointer;
+      border-bottom: 1px solid #f1f3f4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 300px;
+    }
+    .dropdown-item:hover {
+      background-color: #f1f3f4;
+    }
+    @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+    @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+    #download-animation {
+      display: none;
+      position: absolute;
+      top: 45px;
+      right: 20px;
+      background-color: #34a853;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 13px;
+      font-weight: bold;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      z-index: 3000;
+    }
+    #download-animation .icon {
+      margin-right: 6px;
+      animation: blink 1s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div id="tabs">
+    <div id="overflow-btn">v</div>
+    <div id="new-tab">+</div>
+  </div>
+  <div id="tab-dropdown"></div>
+  
+  <div id="toolbar">
+    <div id="nav-buttons">
+      <button id="back-btn">←</button>
+      <button id="forward-btn">→</button>
+      <button id="refresh-btn">↻</button>
+    </div>
+    <input type="text" id="url-bar" placeholder="Search Google or type a URL">
+    <div id="global-dl-container" style="display: flex; position: relative; margin-right: 12px; align-items: center; cursor: pointer;" title="Downloads">
+      <button id="global-dl-btn" style="background: none; border: none; cursor: pointer; color: #5f6368; padding: 4px; display: flex; align-items: center; justify-content: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="currentColor"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+      </button>
+      <div id="global-dl-badge" style="display: none; position: absolute; top: -2px; right: -6px; background: #1a73e8; color: white; border-radius: 50%; font-size: 10px; width: 16px; height: 16px; align-items: center; justify-content: center; font-weight: bold;">0</div>
+    </div>
+    <div id="stream-btn-container">
+      <button id="stream-btn">📺</button>
+      <div id="stream-badge">0</div>
+    </div>
+    <button id="menu-btn">⋮</button>
+  </div>
+
+  <div id="download-animation">
+    <span class="icon">⬇</span>
+    Downloading...
+  </div>
+
+  <div id="video-list-dropdown">
+    <!-- Populated by renderer.js -->
+  </div>
+
+  <div id="content-area"></div>
+
+  <script src="./renderer.js"></script>
+</body>
+</html>

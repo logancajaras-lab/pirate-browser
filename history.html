@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>History</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f8f9fa; color: #202124; margin: 0; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+    
+    /* Top Header */
+    #header { height: 56px; display: flex; align-items: center; padding: 0 24px; background: white; border-bottom: 1px solid #dadce0; flex-shrink: 0; }
+    #header h1 { font-size: 22px; font-weight: 400; margin: 0; color: #202124; margin-right: 50px; display: flex; align-items: center; gap: 8px;}
+    .search-container { flex-grow: 1; max-width: 680px; position: relative; }
+    .search-icon { position: absolute; left: 16px; top: 12px; color: #5f6368; }
+    #search-input { width: 100%; height: 44px; border-radius: 22px; border: none; background: #f1f3f4; padding-left: 48px; padding-right: 16px; font-size: 16px; outline: none; box-sizing: border-box; }
+    #search-input:focus { background: white; box-shadow: 0 1px 6px rgba(32,33,36,.28); }
+    
+    /* Layout Container */
+    #main-container { display: flex; flex-grow: 1; overflow: hidden; }
+    
+    /* Sidebar */
+    #sidebar { width: 256px; padding-top: 16px; flex-shrink: 0; display: flex; flex-direction: column; }
+    .sidebar-item { padding: 12px 24px; font-size: 14px; font-weight: 500; cursor: pointer; color: #5f6368; display: flex; align-items: center; gap: 16px; margin-right: 16px; border-radius: 0 24px 24px 0; }
+    .sidebar-item:hover { background: #f1f3f4; }
+    .sidebar-item.active { background: #e8f0fe; color: #1a73e8; }
+    
+    /* Content Area */
+    #content-area { flex-grow: 1; overflow-y: auto; padding: 24px; }
+    .content-box { max-width: 800px; margin: 0 auto; background: white; border-radius: 8px; box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15); padding: 16px 0; }
+    
+    .tab-header { display: flex; border-bottom: 1px solid #dadce0; padding-bottom: 12px; margin-bottom: 16px; padding-left: 24px; }
+    .tab { font-weight: 500; color: #1a73e8; font-size: 14px; display: flex; align-items: center; gap: 8px; cursor: pointer; border-bottom: 2px solid #1a73e8; padding-bottom: 12px; margin-bottom: -13px; }
+    
+    .date-group { margin-bottom: 24px; }
+    .date-header { font-size: 14px; font-weight: 500; color: #202124; padding: 16px 24px 8px 24px; }
+    
+    .history-item { display: flex; align-items: center; padding: 10px 24px; cursor: pointer; }
+    .history-item:hover { background: #f1f3f4; }
+    
+    .checkbox { width: 16px; height: 16px; border: 2px solid #5f6368; border-radius: 2px; margin-right: 16px; }
+    .time { font-size: 13px; color: #5f6368; width: 60px; flex-shrink: 0; }
+    .favicon { font-size: 16px; margin-right: 16px; color: #5f6368; }
+    
+    .item-info { flex-grow: 1; display: flex; align-items: center; overflow: hidden; gap: 8px; }
+    .title { font-size: 14px; color: #202124; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60%; }
+    .domain { font-size: 13px; color: #5f6368; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    
+    .menu-btn { color: #5f6368; cursor: pointer; font-size: 16px; padding: 8px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .menu-btn:hover { background: #e8eaed; }
+  </style>
+</head>
+<body>
+  
+  <div id="header">
+    <h1>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#1a73e8"><path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/></svg>
+      History
+    </h1>
+    <div class="search-container">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+      <input type="text" id="search-input" placeholder="Search history">
+    </div>
+  </div>
+
+  <div id="main-container">
+    <div id="sidebar">
+      <div class="sidebar-item active">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/></svg>
+        Browser history
+      </div>
+      <div class="sidebar-item" id="clear-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
+        Clear browsing data
+      </div>
+    </div>
+
+    <div id="content-area">
+      <div class="content-box">
+        <div class="tab-header">
+          <div class="tab">
+            <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor"><path d="M120-280v-80h480v80H120Zm0-160v-80h720v80H120Zm0-160v-80h720v80H120Z"/></svg>
+            By date
+          </div>
+        </div>
+        
+        <div id="history-list">
+          <!-- History groups will be injected here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="history.js"></script>
+</body>
+</html>

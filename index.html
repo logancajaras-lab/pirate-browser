@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pirate Browser</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #dee1e6;
+    }
+    #toolbar {
+      display: flex;
+      padding: 8px;
+      background-color: white;
+      border-bottom: 1px solid #ccc;
+      align-items: center;
+      -webkit-app-region: no-drag;
+    }
+    #nav-buttons {
+      display: flex;
+      gap: 5px;
+      margin-right: 10px;
+    }
+    button {
+      background: none;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #f1f3f4;
+    }
+    #url-bar {
+      flex-grow: 1;
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid transparent;
+      background-color: #f1f3f4;
+      font-size: 14px;
+      outline: none;
+    }
+    #url-bar:focus {
+      background-color: #ffffff;
+      border: 1px solid #1a73e8;
+      box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3);
+    }
+    #tabs {
+      display: flex;
+      background-color: #dee1e6;
+      padding: 8px 140px 0 8px; /* Leave space on the right for window controls */
+      align-items: center;
+      -webkit-app-region: drag; /* Allow window dragging */
+      height: 30px;
+    }
+    #overflow-btn {
+      display: none;
+      padding: 4px 8px;
+      margin-right: 8px;
+      cursor: pointer;
+      background: #f1f3f4;
+      border-radius: 4px;
+      font-weight: bold;
+      -webkit-app-region: no-drag;
+    }
+    #overflow-btn:hover {
+      background: #dadce0;
+    }
+    .tab {
+      padding: 8px 12px;
+      background-color: #f1f3f4;
+      border-radius: 8px 8px 0 0;
+      margin-right: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      flex: 1 1 0; /* Allow shrinking and growing evenly */
+      min-width: 30px;
+      max-width: 200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid transparent;
+      -webkit-app-region: no-drag;
+    }
+    #new-tab {
+      padding: 4px 8px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 50%;
+      background: #f1f3f4;
+      margin-left: 4px;
+      -webkit-app-region: no-drag;
+    }
+    #new-tab:hover {
+      background: #dadce0;
+    }
+    .tab.active {
+      background-color: #ffffff;
+    }
+    .tab .title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex-grow: 1;
+      min-width: 0;
+    }
+    .close-tab {
+      font-size: 10px;
+      margin-left: 4px;
+      padding: 2px 4px;
+      border-radius: 50%;
+      min-width: 14px;
+      text-align: center;
+    }
+    .close-tab:hover {
+      background-color: #dadce0;
+    }
+    #new-tab {
+      padding: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    #content-area {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    webview {
+      width: 100%;
+      flex-grow: 1;
+      border: none;
+      display: none;
+    }
+    webview.active {
+      display: flex;
+    }
+    #stream-btn-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      display: none;
+    }
+    #stream-btn {
+      color: #ea4335;
+      font-size: 20px;
+    }
+    #stream-badge {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      background: red;
+      color: white;
+      font-size: 10px;
+      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      pointer-events: none;
+    }
+    .video-dl-btn:hover { background: #2b8c46; }
+    .quality-selector {
+      display: none;
+      margin-top: 8px;
+      width: 100%;
+    }
+    .quality-selector select { width: 100%; margin-bottom: 6px; padding: 4px; border-radius: 4px; border: 1px solid #ccc; }
+    .quality-selector button.confirm-dl { width: 100%; background: #1a73e8; color: white; border-radius: 4px; border: none; padding: 6px; cursor: pointer; border-radius: 16px; font-weight: bold; }
+    .quality-selector button.confirm-dl:hover { background: #1557b0; }
+    #tab-dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 8px;
+      background: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      z-index: 2000;
+      max-height: 400px;
+      overflow-y: auto;
+      min-width: 150px;
+    }
+    .dropdown-item {
+      padding: 8px 12px;
+      font-size: 12px;
+      cursor: pointer;
+      border-bottom: 1px solid #f1f3f4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 300px;
+    }
+    .dropdown-item:hover {
+      background-color: #f1f3f4;
+    }
+    @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+    @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+    #download-animation {
+      display: none;
+      position: absolute;
+      top: 45px;
+      right: 20px;
+      background-color: #34a853;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 13px;
+      font-weight: bold;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      z-index: 3000;
+    }
+    #download-animation .icon {
+      margin-right: 6px;
+      animation: blink 1s infinite;
+    }
+    #fb-source-btn {
+      margin-left: 8px;
+      color: #1877f2;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    #fb-source-panel {
+      display: none;
+      position: absolute;
+      top: 92px;
+      right: 12px;
+      width: 420px;
+      max-width: calc(100vw - 24px);
+      background: #ffffff;
+      border: 1px solid #dadce0;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(60,64,67,0.18);
+      padding: 12px;
+      z-index: 3000;
+      box-sizing: border-box;
+    }
+    #fb-source-panel.open {
+      display: block;
+    }
+    #fb-source-panel h3 {
+      margin: 0 0 10px 0;
+      color: #202124;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    #fb-source-input,
+    #fb-source-result {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #dadce0;
+      border-radius: 6px;
+      font-size: 13px;
+      padding: 8px;
+      outline: none;
+    }
+    #fb-source-input:focus {
+      border-color: #1a73e8;
+    }
+    #fb-source-result {
+      min-height: 36px;
+      margin-top: 8px;
+      color: #202124;
+      background: #f8fafd;
+      word-break: break-all;
+    }
+    #fb-source-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+    #fb-source-actions button {
+      width: auto;
+      height: 30px;
+      border-radius: 15px;
+      padding: 0 12px;
+      font-size: 12px;
+      color: #202124;
+      background: #f1f3f4;
+    }
+    #fb-source-actions button.primary {
+      background: #1a73e8;
+      color: #ffffff;
+    }
+    #fb-source-status {
+      min-height: 16px;
+      margin-top: 8px;
+      color: #5f6368;
+      font-size: 12px;
+    }
+    #fb-reels-note {
+      margin-top: 8px;
+      color: #5f6368;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+    
+    #find-bar {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 20px;
+      background: white;
+      border: 1px solid #dadce0;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 8px;
+      z-index: 4000;
+      align-items: center;
+      gap: 8px;
+    }
+    #find-input {
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 13px;
+      outline: none;
+      width: 200px;
+    }
+    #find-input:focus { border-color: #1a73e8; }
+    #find-counter { font-size: 12px; color: #5f6368; min-width: 40px; text-align: center; }
+    .find-btn {
+      background: none; border: none; cursor: pointer; color: #5f6368; font-size: 12px; padding: 4px; border-radius: 4px;
+      display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;
+    }
+    .find-btn:hover { background: #f1f3f4; }
+
+    #extensions-popup {
+      display: none;
+      position: absolute;
+      top: 48px;
+      right: 48px;
+      width: 340px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+      z-index: 5000;
+      flex-direction: column;
+      color: #202124;
+      font-size: 13px;
+      border: 1px solid #dadce0;
+    }
+    .ext-header { display: flex; justify-content: space-between; align-items: center; padding: 16px; }
+    .ext-header h2 { margin: 0; font-size: 15px; font-weight: 500; }
+    .ext-close { cursor: pointer; background: none; border: none; color: #5f6368; font-size: 16px; padding: 4px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .ext-close:hover { background: #f1f3f4; }
+    .ext-section { padding: 0 16px; margin-bottom: 16px; }
+    .ext-section-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+    .ext-section-desc { font-size: 12px; color: #5f6368; margin-bottom: 12px; line-height: 1.4; }
+    .ext-item { display: flex; align-items: center; padding: 8px 0; }
+    .ext-item-icon { width: 24px; height: 24px; background: #f1f3f4; border-radius: 4px; margin-right: 12px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+    .ext-item-name { flex-grow: 1; font-size: 13px; }
+    .ext-item-action { cursor: pointer; color: #5f6368; padding: 4px 8px; background: none; border: none; font-size: 16px; }
+    .ext-item-action:hover { background: #f1f3f4; border-radius: 4px; }
+    .ext-footer { border-top: 1px solid #dadce0; padding: 12px 16px; display: flex; align-items: center; cursor: pointer; font-size: 13px; color: #202124; gap: 12px;}
+    .ext-footer:hover { background: #f8f9fa; border-radius: 0 0 8px 8px; }
+  </style>
+</head>
+<body>
+  <div id="tabs">
+    <div id="overflow-btn">v</div>
+    <div id="new-tab">+</div>
+  </div>
+  <div id="tab-dropdown"></div>
+  
+  <div id="toolbar">
+    <div id="nav-buttons">
+      <button id="back-btn">←</button>
+      <button id="forward-btn">→</button>
+      <button id="refresh-btn">↻</button>
+    </div>
+    <input type="text" id="url-bar" placeholder="Search Google or type a URL">
+    <button id="fb-source-btn" title="Find Facebook page from post">FB</button>
+    <div id="global-dl-container" style="display: flex; position: relative; margin-right: 12px; align-items: center; cursor: pointer;" title="Downloads">
+      <button id="global-dl-btn" style="background: none; border: none; cursor: pointer; color: #5f6368; padding: 4px; display: flex; align-items: center; justify-content: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="currentColor"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+      </button>
+      <div id="global-dl-badge" style="display: none; position: absolute; top: -2px; right: -6px; background: #1a73e8; color: white; border-radius: 50%; font-size: 10px; width: 16px; height: 16px; align-items: center; justify-content: center; font-weight: bold;">0</div>
+    </div>
+    <div id="stream-btn-container">
+      <button id="stream-btn">📺</button>
+      <div id="stream-badge">0</div>
+    </div>
+    <button id="extensions-btn" title="Extensions" style="display: flex; align-items: center; justify-content: center; color: #5f6368;">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M680-80v-120H560v-80h120v-120h80v120h120v80H760v120h-80Zm-360 0q-83 0-141.5-58.5T120-280v-120h80v120q0 50 35 85t85 35h120v80H320Zm-200-360v-120q0-83 58.5-141.5T320-760h120v80H320q-50 0-85 35t-35 85v120h-80Zm640 0v-120q0-50-35-85t-85-35H560v-80h120q83 0 141.5 58.5T880-440v120h-80Z"/></svg>
+    </button>
+    <button id="menu-btn">⋮</button>
+  </div>
+
+  <div id="download-animation">
+    <span class="icon">⬇</span>
+    Downloading...
+  </div>
+
+  <div id="fb-source-panel">
+    <h3>Facebook page and reels</h3>
+    <input type="text" id="fb-source-input" placeholder="Paste a Facebook post link">
+    <div id="fb-source-actions">
+      <button id="fb-source-current">Use current tab</button>
+      <button id="fb-source-copy">Copy result</button>
+      <button id="fb-reels-open">Open reels</button>
+      <button id="fb-reels-detected">Detected downloads</button>
+      <button id="fb-source-find" class="primary">Find page</button>
+    </div>
+    <div id="fb-source-result"></div>
+    <div id="fb-source-status"></div>
+    <div id="fb-reels-note">Open reels, play a reel, then use Detected downloads for videos the browser can download.</div>
+  </div>
+
+  <div id="find-bar">
+    <input type="text" id="find-input" placeholder="Find in page...">
+    <span id="find-counter">0/0</span>
+    <button id="find-prev" class="find-btn" title="Previous">▲</button>
+    <button id="find-next" class="find-btn" title="Next">▼</button>
+    <div style="width: 1px; height: 16px; background: #dadce0; margin: 0 4px;"></div>
+    <button id="find-close" class="find-btn" title="Close">✖</button>
+  </div>
+
+  <div id="extensions-popup">
+    <div class="ext-header">
+      <h2>Extensions</h2>
+      <button class="ext-close" id="ext-close-btn">✖</button>
+    </div>
+    
+    <div class="ext-section">
+      <div class="ext-section-title">Full access</div>
+      <div class="ext-section-desc">These extensions can see and change information on this site.</div>
+      <div class="ext-item">
+        <div class="ext-item-icon" style="background:#e6f4ea;color:#137333;">🛡️</div>
+        <div class="ext-item-name">AdGuard AdBlocker</div>
+        <button class="ext-item-action">📌</button>
+        <button class="ext-item-action">⋮</button>
+      </div>
+    </div>
+
+    <div class="ext-section">
+      <div class="ext-section-title">Access requested</div>
+      <div class="ext-section-desc">To give an extension access to this site, click it.</div>
+      <div class="ext-item">
+        <div class="ext-item-icon" style="background:#fef7e0;color:#ea8600;">🚦</div>
+        <div class="ext-item-name">Lighthouse</div>
+        <button class="ext-item-action">📌</button>
+        <button class="ext-item-action">⋮</button>
+      </div>
+    </div>
+
+    <div class="ext-section">
+      <div class="ext-section-title">No access needed</div>
+      <div class="ext-section-desc">These extensions don't need to see and change information on this site.</div>
+      <div class="ext-item">
+        <div class="ext-item-icon" style="background:#e8eaed;color:#5f6368;">💻</div>
+        <div class="ext-item-name">Chrome Remote Desktop</div>
+        <button class="ext-item-action">📌</button>
+        <button class="ext-item-action">⋮</button>
+      </div>
+    </div>
+
+    <div class="ext-footer">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="#5f6368"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm112-260q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Z"/></svg>
+      Manage extensions
+    </div>
+  </div>
+
+  <div id="content-area"></div>
+
+  <script src="./renderer.js"></script>
+</body>
+</html>
