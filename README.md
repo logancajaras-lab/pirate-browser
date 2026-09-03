@@ -14,7 +14,7 @@ Browse securely and privately with built-in stealth features. Prevent fingerprin
 Download media from almost anywhere on the web natively. Pirate Browser automatically intercepts and parses video streams (including complex HLS and DASH streams) and offers a one-click download. 
 * Works perfectly with Facebook, Instagram, and more!
 * Multi-threaded downloading for maximum speed.
-* Powered by native integrations with fmpeg and yt-dlp.
+* Powered by native integrations with `ffmpeg` and `yt-dlp`.
 
 ### 🤖 Automation Tools
 Built-in web automation and testing suite to script repetitive tasks or test web applications without needing external heavy frameworks like Puppeteer or Selenium.
@@ -29,15 +29,18 @@ No hidden telemetry, no shady background processes. The entire codebase is open-
 **Prerequisites:** Node.js
 
 1. Clone the repository:
-   \\ash
+   ```bash
    git clone https://github.com/logancajaras-lab/pirate-browser.git
-   \2. Install dependencies:
-   \\ash
+   ```
+2. Install dependencies:
+   ```bash
    npm install
-   \3. Run the browser locally:
-   \\ash
+   ```
+3. Run the browser locally:
+   ```bash
    npm start
-   \4. Build portable executable (Windows):
-   \\ash
+   ```
+4. Build portable executable (Windows):
+   ```bash
    npm run build
-   \
+   ```
