@@ -108,12 +108,56 @@
             text-decoration-style: wavy;
             text-decoration-color: var(--accent);
         }
+
+        /* FAQ Section Styles */
+        .faq-container {
+            max-width: 800px;
+            width: 100%;
+            margin: 20px auto 40px auto;
+            padding: 0 20px;
+        }
+        .faq-container h2 {
+            font-family: 'Caveat', cursive;
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: var(--accent);
+            transform: rotate(-1deg);
+        }
+        .faq-item {
+            margin-bottom: 30px;
+            background-color: var(--card-bg);
+            padding: 20px 25px;
+            border: 2px solid #555;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            transform: rotate(-0.5deg);
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            transition: border-color 0.3s ease;
+        }
+        .faq-item:hover {
+            border-color: var(--accent);
+        }
+        .faq-item:nth-child(even) {
+            transform: rotate(0.5deg);
+        }
+        .faq-q {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+            color: var(--accent-hover);
+        }
+        .faq-a {
+            margin: 0;
+            color: #d0d0d0;
+        }
+
         footer {
             margin-top: 50px;
             padding: 30px;
             text-align: center;
             color: #777;
-            font-size: 1.2rem;
             border-top: 2px dashed #444;
             width: 100%;
             font-family: 'Caveat', cursive;
@@ -152,6 +196,30 @@
             <div class="feature-icon">🛡️</div>
             <h3>100% Open Source</h3>
             <p>Fully transparent codebase. No hidden telemetry, no tracking, built securely on the Electron framework.</p>
+        </div>
+    </div>
+
+    <div class="faq-container">
+        <h2>❓ Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <h4 class="faq-q">🐌 It lags my computer when downloading!</h4>
+            <p class="faq-a">This usually happens because video downloads use a lot of disk speed, causing a bottleneck if you're saving to your main Operating System (OS) partition. We highly recommend keeping your browser installed on a separate partition, or changing your download folder to a different drive. If you have plenty of RAM, you can use a tool like <strong>ImDisk</strong> to easily create a RAM partition for lightning-fast, lag-free downloads!</p>
+        </div>
+
+        <div class="faq-item">
+            <h4 class="faq-q">🔒 Is my data safe?</h4>
+            <p class="faq-a">Yes! Pirate Browser is 100% open-source and transparent. It never connects to any servers run by the creator, and everything happens locally. You are the sole owner of your data.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4 class="faq-q">🕵️‍♂️ Am I completely anonymous?</h4>
+            <p class="faq-a">No! Pirate Browser is <strong>not</strong> an anonymity network like Tor. It provides excellent baseline protection against web trackers and browser fingerprinting, but it does not hide your IP address from your internet provider or the sites you visit.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4 class="faq-q">🎬 How do I download streaming videos?</h4>
+            <p class="faq-a">Simply play the video you want to download. Pirate Browser's built-in <strong>Media Sniffer</strong> runs automatically in the background. When it detects a valid video stream, a notification popup will appear—just click the download button on the popup to save it!</p>
         </div>
     </div>
 
