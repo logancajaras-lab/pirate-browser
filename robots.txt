@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://logancajaras-lab.github.io/pirate-browser/sitemap.xml
